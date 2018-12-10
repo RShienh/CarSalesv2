@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Welcome";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Welcome</h2>
+
+<h3>Hello, <b>@Context.User.Identity.Name</b>! Welcome!</h3>
+@if (@Context.User.Identity.Name.ToString().ToLower() == "admin")
+{
+    <text>Here are some of the options for Administrator</text>
+    @Html.ActionLink("List of Users", "AdminOnly", "Home")
+}
+else
+{
+    @Html.ActionLink("Edit Profile", "EditProfile", "Home")
+    @Html.ActionLink("Signout", "SignOut", "Account")
+}

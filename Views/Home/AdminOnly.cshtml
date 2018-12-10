@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "AdminOnly";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Administrators</h2>
+
+@{
+    ViewBag.Title = "UnAuthorized";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="divUserListContainer">
+    @Html.Action("ManageUserPartial", "Home")
+</div>

@@ -1,0 +1,14 @@
+﻿@using CarSale.Models.ViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/bootstrap.css" rel="stylesheet"/>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet"/>
+<h2>Welcome to the car sales manager program</h2>
+<br/>
+<button type="submit" class="btn btn-info" style="width: 300px" onclick="location.href='@Url.Action("LogIn", "Account")'">
+    Already have an account ? Click to Login
+</button><br/><br/>
+<button type="submit" class="btn btn-success" style="width: 300px" onclick="location.href='@Url.Action("SignUp", "Account")'">No Account Yet? Click to Sign up</button> <br/>
